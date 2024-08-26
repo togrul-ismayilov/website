@@ -23,6 +23,11 @@
             max-width: 120px;
             height: auto;
         }
+        .header h1 {
+            margin-top: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }
         .account-list {
             margin: 20px;
         }
@@ -94,6 +99,9 @@
             .header img {
                 max-width: 100px;
             }
+            .header h1 {
+                font-size: 18px;
+            }
             .account-item {
                 flex-direction: column;
                 align-items: flex-start;
@@ -112,26 +120,27 @@
 <body>
     <div class="header">
         <img src="https://aydemirkuyumculuk.com/cdn/shop/files/AYG_380x.png?v=1673453914" alt="Company Logo">
+        <h1>Aydemir Kuyumculuk IBAN Listesi</h1>
     </div>
 
     <div class="account-list">
         <div class="account-item">
             <img src="https://logowik.com/content/uploads/images/akbank74378.logowik.com.webp" alt="Bank 1 Logo">
             <span>1234 5678 9012 3456</span>
-            <button onclick="copyToClipboard('1234 5678 9012 3456')">Copy</button>
-            <div class="tooltip">Copied!</div>
+            <button onclick="copyToClipboard('1234 5678 9012 3456')">Kopyala</button>
+            <div class="tooltip">IBAN kopyalandı</div>
         </div>
         <div class="account-item">
             <img src="https://logos-world.net/wp-content/uploads/2023/02/DenizBank-Logo.png" alt="Bank 2 Logo">
             <span>2345 6789 0123 4567</span>
-            <button onclick="copyToClipboard('2345 6789 0123 4567')">Copy</button>
-            <div class="tooltip">Copied!</div>
+            <button onclick="copyToClipboard('2345 6789 0123 4567')">Kopyala</button>
+            <div class="tooltip">IBAN kopyalandı</div>
         </div>
         <div class="account-item">
             <img src="https://www.ekonomidunya.com/images/haberler/2023/04/qatar-national-bank-in-finansal-sonuclari-4039.jpg" alt="Bank 3 Logo">
             <span>3456 7890 1234 5678</span>
-            <button onclick="copyToClipboard('3456 7890 1234 5678')">Copy</button>
-            <div class="tooltip">Copied!</div>
+            <button onclick="copyToClipboard('3456 7890 1234 5678')">Kopyala</button>
+            <div class="tooltip">IBAN kopyalandı</div>
         </div>
     </div>
 
