@@ -20,11 +20,11 @@
             border-bottom: 2px solid #c5a54e;
         }
         .header img {
-            max-width: 160px;
+            max-width: 120px;
             height: auto;
         }
         .account-list {
-            margin: 40px;
+            margin: 20px;
         }
         .account-item {
             display: flex;
@@ -35,14 +35,15 @@
             border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative; /* Ensure tooltip appears correctly */
             transition: box-shadow 0.3s ease;
         }
         .account-item:hover {
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
         .account-item img {
-            margin-right: 25px;
-            width: 80px;
+            margin-right: 15px;
+            width: 60px;
             height: auto;
         }
         .account-item span {
@@ -55,7 +56,7 @@
             background-color: #d4af37; /* Gold color */
             color: white;
             border: none;
-            padding: 12px 16px;
+            padding: 8px 12px;
             font-size: 14px;
             border-radius: 4px;
             cursor: pointer;
@@ -63,6 +64,28 @@
         }
         .account-item button:hover {
             background-color: #c5a54e; /* Darker gold color */
+        }
+        
+        /* Tooltip styles */
+        .tooltip {
+            position: absolute;
+            bottom: 100%; /* Position above the item */
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 10;
+        }
+        .account-item:hover .tooltip {
+            opacity: 1;
+            visibility: visible;
         }
         
         /* Mobile Responsiveness */
