@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Jewelry Sale</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .header {
+            background-color: #d4af37; /* Gold color */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #c5a54e;
+        }
+        .header img {
+            max-width: 160px;
+            height: auto;
+        }
+        .account-list {
+            margin: 40px;
+        }
+        .account-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+        .account-item:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        .account-item img {
+            margin-right: 25px;
+            width: 80px;
+            height: auto;
+        }
+        .account-item span {
+            flex: 1;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        .account-item button {
+            background-color: #d4af37; /* Gold color */
+            color: white;
+            border: none;
+            padding: 12px 16px;
+            font-size: 14px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .account-item button:hover {
+            background-color: #c5a54e; /* Darker gold color */
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            .header img {
+                max-width: 100px;
+            }
+            .account-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 15px;
+            }
+            .account-item img {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+            .account-item span {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://lokmankuyumculuk.com.tr/coming/logo_lokmn_kymc.png" alt="Company Logo">
+    </div>
+
+    <div class="account-list">
+        <div class="account-item">
+            <img src="https://logowik.com/content/uploads/images/akbank74378.logowik.com.webp" alt="Bank 1 Logo">
+            <span>1234 5678 9012 3456</span>
+            <button onclick="copyToClipboard('1234 5678 9012 3456')">Copy</button>
+        </div>
+        <div class="account-item">
+            <img src="https://logos-world.net/wp-content/uploads/2023/02/DenizBank-Logo.png" alt="Bank 2 Logo">
+            <span>2345 6789 0123 4567</span>
+            <button onclick="copyToClipboard('2345 6789 0123 4567')">Copy</button>
+        </div>
+        <div class="account-item">
+            <img src="https://www.ekonomidunya.com/images/haberler/2023/04/qatar-national-bank-in-finansal-sonuclari-4039.jpg" alt="Bank 3 Logo">
+            <span>3456 7890 1234 5678</span>
+            <button onclick="copyToClipboard('3456 7890 1234 5678')">Copy</button>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(function() {
+                alert('Copied to clipboard!');
+            }, function(err) {
+                console.error('Could not copy text: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
