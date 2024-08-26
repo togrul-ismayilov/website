@@ -9,12 +9,12 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f2e9; /* Light pinkish-yellow */
+            background-color: #e6ddc1; /* Light color */
             color: #333;
         }
         .header {
-            background-color: #f5f2e9; /* Gold color */
-            color: white;
+            background-color: #e6ddc1; /* Light color */
+            color: #333;
             padding: 20px;
             text-align: center;
             border-bottom: 2px solid #c5a54e;
@@ -83,7 +83,8 @@
             transition: opacity 0.3s ease, visibility 0.3s ease;
             z-index: 10;
         }
-        .account-item:hover .tooltip {
+        .account-item button:focus + .tooltip,
+        .account-item button:hover + .tooltip {
             opacity: 1;
             visibility: visible;
         }
@@ -118,23 +119,26 @@
             <img src="https://logowik.com/content/uploads/images/akbank74378.logowik.com.webp" alt="Bank 1 Logo">
             <span>1234 5678 9012 3456</span>
             <button onclick="copyToClipboard('1234 5678 9012 3456')">Copy</button>
+            <div class="tooltip">Copied!</div>
         </div>
         <div class="account-item">
             <img src="https://logos-world.net/wp-content/uploads/2023/02/DenizBank-Logo.png" alt="Bank 2 Logo">
             <span>2345 6789 0123 4567</span>
             <button onclick="copyToClipboard('2345 6789 0123 4567')">Copy</button>
+            <div class="tooltip">Copied!</div>
         </div>
         <div class="account-item">
             <img src="https://www.ekonomidunya.com/images/haberler/2023/04/qatar-national-bank-in-finansal-sonuclari-4039.jpg" alt="Bank 3 Logo">
             <span>3456 7890 1234 5678</span>
             <button onclick="copyToClipboard('3456 7890 1234 5678')">Copy</button>
+            <div class="tooltip">Copied!</div>
         </div>
     </div>
 
     <script>
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(function() {
-                alert('Copied to clipboard!');
+                // Do nothing - handled by CSS tooltip
             }, function(err) {
                 console.error('Could not copy text: ', err);
             });
